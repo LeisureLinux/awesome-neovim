@@ -8,100 +8,103 @@
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 -->
 
-> Collections of awesome Neovim plugins. Mostly targeting Neovim specific features.
+> 本页面为 awesome Neovim 插件的聚合. 主要面向 Neovim 的一些特色
 
-[Neovim](https://neovim.io/) is a Vim-based text editor engineered for extensibility and usability, to encourage new applications and contributions.
+> 原始 Repo: https://github.com/rockerBOO/awesome-neovim
 
-## Contents
+> 中文翻译： [LeisureLinux](https://space.bilibili.com/517298151/)
+
+[Neovim](https://neovim.io/) 是一个基于 Vim 的文本编辑器，主要是提升扩展性和可用性，鼓励新的应用以及更多的贡献者
+
+## 目录
 
 - [Wishlist](#wishlist)
 - [UI](#ui)
-- [Plugin](#plugin)
-  - [Plugin Manager](#plugin-manager)
+- [插件](#plugin)
+  - [插件管理](#plugin-manager)
   - [LSP](#lsp)
-  - [Completion](#completion)
-  - [Programming Languages Support](#programming-languages-support)
+  - [自动补全](#completion)
+  - [编程语言支持](#programming-languages-support)
     - [Golang](#golang)
     - [YAML](#yaml)
-    - [Web Development](#web-development)
-    - [Markdown and LaTeX](#markdown-and-latex)
-  - [Language](#language)
-  - [Syntax](#syntax)
+    - [Web 开发](#web-development)
+    - [Markdown 以及 LaTeX](#markdown-and-latex)
+  - [语言](#language)
+  - [句法](#syntax)
   - [Snippet](#snippet)
-  - [Register](#register)
+  - [寄存器](#register)
   - [Marks](#marks)
-  - [Search](#search)
-  - [Fuzzy Finder](#fuzzy-finder)
-  - [File Explorer](#file-explorer)
-  - [Project](#project)
-  - [Color](#color)
-  - [Colorscheme](#colorscheme)
-    - [Colorscheme Creation](#colorscheme-creation)
-    - [Colorscheme Switchers](#colorscheme-switchers)
-  - [Bars and Lines](#bars-and-lines)
-    - [Statusline](#statusline)
-    - [Tabline](#tabline)
-    - [Cursorline](#cursorline)
-  - [Startup](#startup)
-  - [Icon](#icon)
-  - [Media](#media)
-  - [Note Taking](#note-taking)
-  - [Utility](#utility)
-  - [Terminal Integration](#terminal-integration)
-  - [Debugging](#debugging)
+  - [搜索](#search)
+  - [模糊查询](#fuzzy-finder)
+  - [文件管理器](#file-explorer)
+  - [项目](#project)
+  - [颜色](#color)
+  - [颜色主题](#colorscheme)
+    - [颜色主题的创建](#colorscheme-creation)
+    - [颜色主题的切换](#colorscheme-switchers)
+  - [柱和各种状态线](#bars-and-lines)
+    - [状态线](#statusline)
+    - [标签线](#tabline)
+    - [光标线](#cursorline)
+  - [启动](#startup)
+  - [图标](#icon)
+  - [媒体](#media)
+  - [笔记记录](#note-taking)
+  - [工具](#utility)
+  - [终端整合](#terminal-integration)
+  - [调试](#debugging)
     - [Quickfix](#quickfix)
-  - [Test](#test)
+  - [测试](#test)
   - [Code Runner](#code-runner)
-  - [Neovim Lua Development](#neovim-lua-development)
+  - [Lua开发](#neovim-lua-development)
   - [Fennel](#fennel)
-  - [Dependency Management](#dependency-management)
+  - [依赖管理](#dependency-management)
   - [Git](#git)
     - [GitHub](#github)
-  - [Motion](#motion)
-  - [Keybinding](#keybinding)
-  - [Mouse](#mouse)
-  - [Scrolling](#scrolling)
-    - [Scrollbar](#scrollbar)
-  - [Editing Support](#editing-support)
-    - [Comment](#comment)
-  - [Formatting](#formatting)
-    - [Indent](#indent)
-  - [Command Line](#command-line)
-  - [Session](#session)
-  - [Remote Development](#remote-development)
-  - [Split and Window](#split-and-window)
+  - [移动](#motion)
+  - [键位](#keybinding)
+  - [鼠标](#mouse)
+  - [滚卷](#scrolling)
+    - [滚卷条](#scrollbar)
+  - [编辑支持](#editing-support)
+    - [注释](#comment)
+  - [格式化](#formatting)
+    - [缩进](#indent)
+  - [命令行](#command-line)
+  - [会话](#session)
+  - [远程开发](#remote-development)
+  - [窗口分割](#split-and-window)
     - [Tmux](#tmux)
-  - [Game](#game)
+  - [游戏](#game)
     - [Competitive Programming](#competitive-programming)
-  - [Preconfigured Configuration](#preconfigured-configuration)
-- [External](#external)
-  - [Version Manager](#version-manager)
+  - [预配置](#preconfigured-configuration)
+- [外部](#external)
+  - [版本管理](#version-manager)
   - [Boilerplate](#boilerplate)
 - [Vim](#vim)
-- [Resource](#resource)
+- [参考资料](#resource)
 
-## Wishlist
+## <a name="wishlist">Wishlist (心愿清单)</a>
 
-Have a problem a plugin can solve? Add it to the [nvim-lua wishlist](https://github.com/nvim-lua/wishlist).
+想要一个插件解决遇到的问题？ 把心愿添加到这里： [nvim-lua wishlist](https://github.com/nvim-lua/wishlist).
 
-## UI
+## <a name="ui">UI (用户界面)</a>
 
-Neovim supports a wide variety of UI's.
-You can find them listed on the [Neovim wiki](https://github.com/neovim/neovim/wiki/Related-projects#gui)
+Neovim 支持好多不同的用户界面，可以从 [Neovim wiki](https://github.com/neovim/neovim/wiki/Related-projects#gui)  去找到
 
 ## Plugin
 
-### Plugin Manager
+### <a name="plugin-manager">插件管理</a>
 
 - [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - A use-package inspired plugin manager. Uses native packages, supports Luarocks dependencies, written in Lua, allows for expressive config.
 - [savq/paq-nvim](https://github.com/savq/paq-nvim) - Neovim package manager written in Lua.
 - [NTBBloodbath/cheovim](https://github.com/NTBBloodbath/cheovim) - Neovim configuration switcher written in Lua. Inspired by chemacs.
 - [chiyadev/dep](https://github.com/chiyadev/dep) - An alternative to packer.nvim. It was built to be even better and easier to use. Context can be found [here](https://chiya.dev/posts/2021-11-27-why-package-manager).
-- [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - A modern plugin manager, featuring a graphical interface, async execution, a lockfile and more 💤.
+- [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - 一个现代的插件管理器 , 有图形界面，异步执行，lock文件等特色 💤
 
 ### LSP
 
-#### (requires Neovim 0.5)
+#### (需要 Neovim 0.5 及以上)
 
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configurations for the LSP client.
 - [nvim-lua/lsp-status.nvim](https://github.com/nvim-lua/lsp-status.nvim) - This is a plugin/library for generating statusline components from the built-in LSP client.
@@ -154,7 +157,7 @@ You can find them listed on the [Neovim wiki](https://github.com/neovim/neovim/w
 - [folke/trouble.nvim](https://github.com/folke/trouble.nvim) - A pretty diagnostics list to help you solve all the trouble your code is causing.
 - [folke/lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim) - A plugin that adds missing LSP diagnostics highlight groups for color schemes that don't yet support the builtin LSP client.
 
-### Completion
+### Completion (自动补全)
 
 - [ms-jpq/coq_nvim](https://github.com/ms-jpq/coq_nvim) - Fast as FUCK Neovim completion. SQLite, concurrent scheduler, hundreds of hours of optimization.
 - [jameshiew/nvim-magic](https://github.com/jameshiew/nvim-magic) - Framework for integrating AI code assistance.
@@ -910,13 +913,13 @@ These colorschemes may not specialize in Tree-sitter directly but are written in
 
 These tools are used externally to Neovim to enhance the experience.
 
-### Version Manager
+### Version Manager (版本管理)
 
 - [MordechaiHadad/bob](https://github.com/MordechaiHadad/bob) - A cross platform and easy to use Neovim version manager.
 - [NTBBloodbath/nvenv](https://github.com/NTBBloodbath/nvenv) - A lightweight and blazing fast Neovim version manager.
 - [shohi/neva](https://github.com/shohi/neva) - A Neovim version manager written in Lua.
 
-### Boilerplate
+### <a name="boilerplate">Boilerplate</a>
 
 - [gennaro-tedesco/boilit](https://github.com/gennaro-tedesco/boilit) - Create boilerplate structure plugins.
 - [m00qek/plugin-template.nvim](https://github.com/m00qek/plugin-template.nvim) - A plugin template that setups test infrastructure and GitHub Actions.
